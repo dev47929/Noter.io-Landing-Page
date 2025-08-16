@@ -261,12 +261,19 @@ const PillNav = ({
               background: "var(--base, #000)",
             }}
           >
-            <img
-              src={logo}
-              alt={logoAlt}
-              ref={logoImgRef}
-              className="w-full h-full object-cover block"
-            />
+            {typeof logo === "string" ? (
+  <img
+    src={logo}
+    alt={logoAlt}
+    ref={logoImgRef}
+    className="w-full h-full object-cover block"
+  />
+) : (
+  <span ref={logoImgRef} className="text-white text-2xl flex items-center justify-center">
+    {logo}
+  </span>
+)}
+
           </Link>
         ) : (
           <a
@@ -283,12 +290,19 @@ const PillNav = ({
               background: "var(--base, #000)",
             }}
           >
-            <img
-              src={logo}
-              alt={logoAlt}
-              ref={logoImgRef}
-              className="w-full h-full object-cover block"
-            />
+            {typeof logo === "string" ? (
+  <img
+    src={logo}
+    alt={logoAlt}
+    ref={logoImgRef}
+    className="w-full h-full object-cover block"
+  />
+) : (
+  <span ref={logoImgRef} className="text-white text-2xl flex items-center justify-center">
+    {logo}
+  </span>
+)}
+
           </a>
         )}
 
